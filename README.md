@@ -118,7 +118,6 @@ Representa um evento de corrida.
 
 - PHP
 - HTML5
-- CSS3
 - Programação Orientada a Objetos
 
 ---
