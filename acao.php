@@ -10,7 +10,23 @@ require 'Corrida.php';
 
 $carro = new Carro("SF-26", "1000cv");
 $equipe = new Equipe("Ferrari", "Itália", $carro);
-$piloto = new PilotoVeterano($_POST['nome'], $_POST['idade'], $_POST['nacionalidade'], $equipe, $_POST['titulos'], $_POST['anosCarreira']);
+if ($_POST['tipo'] == "piloto") {
+    $piloto = new Piloto(
+        $_POST['nome'],
+        $_POST['idade'],
+        $_POST['nacionalidade'],
+        $equipe
+    );
+} else {
+    $piloto = new PilotoVeterano(
+        $_POST['nome'],
+        $_POST['idade'],
+        $_POST['nacionalidade'],
+        $equipe,
+        $_POST['titulos'],
+        $_POST['anosCarreira']
+    );
+}
 $construtor = new Construtor("Ferrari", "Itália", 312);
 $categoria = new Categoria("Fórmula 1", "Sem reabastecimento");
 $corrida = new Corrida("GP de Interlagos", "Brasil", $categoria);
@@ -30,13 +46,16 @@ echo "Nome: " . $equipe->getNome() . "<br>";
 echo "Nacionalidade: " . $equipe->getNacionalidade() . "<br>";
 echo "Carro: " . $equipe->getCarro()->getModelo() . "<br>";
 
-echo "<h2>Piloto Veterano</h2>";
+echo "<h2>Piloto</h2>";
 echo "Nome: " . $piloto->getNome() . "<br>";
 echo "Idade: " . $piloto->getIdade() . "<br>";
 echo "Nacionalidade: " . $piloto->getNacionalidade() . "<br>";
 echo "Equipe: " . $piloto->getEquipe()->getNome() . "<br>";
-echo $piloto->exibirPontuacao() . "<br>";
-echo $piloto->exibirPerfil() . "<br>";
+
+if ($_POST['tipo'] == "veterano") {
+    echo $piloto->exibirPontuacao() . "<br>";
+    echo $piloto->exibirPerfil() . "<br>";
+}
 
 echo "<h2>Construtor</h2>";
 echo "Nome: " . $construtor->getNome() . "<br>";
