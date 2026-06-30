@@ -33,7 +33,7 @@
         public function setCarro($carro) {
             $this->carro = $carro;
         }
-        
+
         public function exibirDetalhes() {
             return "Equipe: " . $this->nome . " | Nacionalidade: " . $this->nacionalidade . " | Carro: " . $this->carro->getModelo();
         }
