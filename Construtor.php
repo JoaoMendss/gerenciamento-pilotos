@@ -1,6 +1,4 @@
 <?php
-    require 'Pontuavel.php';
-
     class Construtor implements Pontuavel {
         private $nome;
         private $pais;

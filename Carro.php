@@ -4,8 +4,8 @@
         private $potencia;
 
         public function __construct($modelo, $potencia) {
-            $this-> modelo = $modelo;
-            $this-> potencia = $potencia;
+            $this->modelo = $modelo;
+            $this->potencia = $potencia;
         }
 
         public function getModelo() {

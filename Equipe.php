@@ -5,9 +5,9 @@
         private $carro;
 
         public function __construct($nome, $nacionalidade, $carro) {
-            $this-> nome = $nome;
-            $this-> nacionalidade = $nacionalidade;
-            $this-> carro = $carro;
+            $this->nome = $nome;
+            $this->nacionalidade = $nacionalidade;
+            $this->carro = $carro;
         }
 
         public function getNome() {
@@ -26,7 +26,7 @@
             $this->nacionalidade = $nacionalidade;
         }
 
-         public function getCarro() {
+        public function getCarro() {
             return $this->carro;
         }
 

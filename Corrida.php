@@ -5,9 +5,9 @@
         private $categoria;
 
         public function __construct($nome, $local, $categoria) {
-            $this-> nome = $nome;
-            $this-> local = $local;
-            $this-> categoria = $categoria;
+            $this->nome = $nome;
+            $this->local = $local;
+            $this->categoria = $categoria;
         }
 
         public function getNome() {
@@ -26,7 +26,7 @@
             $this->local = $local;
         }
 
-         public function getCategoria() {
+        public function getCategoria() {
             return $this->categoria;
         }
 

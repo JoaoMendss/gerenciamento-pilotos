@@ -4,8 +4,8 @@
         private $regras;
 
         public function __construct($tipo, $regras) {
-            $this-> tipo = $tipo;
-            $this-> regras = $regras;
+            $this->tipo = $tipo;
+            $this->regras = $regras;
         }
 
         public function getTipo() {

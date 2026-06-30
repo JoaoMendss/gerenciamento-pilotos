@@ -1,7 +1,4 @@
 <?php
-    require 'Piloto.php';
-    require 'Pontuavel.php';
-
     class PilotoVeterano extends Piloto implements Pontuavel {
         private $titulos;
         private $anosCarreira;
